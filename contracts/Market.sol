@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/utils/Address.sol";
 // RarityManifestedMarket
 interface RarityManifestedToken {
     function ownerOf(uint256 tokenId) external view returns (address owner);
+
     function transferFrom(
         address from,
         address to,
@@ -66,21 +67,15 @@ contract RarityManifestedMarket is Ownable {
         s.transferFee = transferFee;
     }
 
-    function list(
-        address buyer,
-        uint256 tokenID,
-        uint256 price
-    ) external {
+    function list(uint256 tokenID, uint256 price) external {
         require(!s.paused, "Market is already paused");
-        require(RMTokens.ownerOf(tokenID) == msg.sender, "Summoner is not yours");
+        require(
+            RMTokens.ownerOf(tokenID) == msg.sender,
+            "Summoner is not yours"
+        );
 
         uint256 payout = price - ((price * s.fee) / 100);
-        if (buyer == address(0)) {
-            require(price >= s.minPrice, "Price too low");
-        } else {
-            payout = price - s.transferFee;
-            require(payout >= 0, "Price too low");
-        }
+        require(price >= s.minPrice, "Price too low");
 
         uint256 listId = uint256(
             keccak256(
@@ -98,7 +93,7 @@ contract RarityManifestedMarket is Ownable {
             listId: listId,
             tokenID: tokenID,
             owner: msg.sender,
-            buyer: buyer,
+            buyer: address(0),
             price: price,
             payout: payout,
             status: Status.LISTED
@@ -119,10 +114,6 @@ contract RarityManifestedMarket is Ownable {
 
         require(msg.value == item.price * 1e18, "wrong value");
         require(item.status == Status.LISTED, "summoner not listed");
-
-        if (item.buyer != address(0)) {
-            require(item.buyer == msg.sender, "Wrong sender");
-        }
 
         item.status = Status.SOLD;
         item.buyer = msg.sender;
