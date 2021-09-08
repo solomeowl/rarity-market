@@ -21,7 +21,6 @@ contract RarityManifestedMarket is Ownable {
     event Unlisted(uint256 blockNumber);
     event FeeChanged(uint256 fee);
     event MinPriceChanged(uint256 minPrice);
-    event TransferFeeChanged(uint256 transferFee);
 
     enum Status {
         LISTED,
@@ -42,7 +41,6 @@ contract RarityManifestedMarket is Ownable {
     struct Storage {
         uint256 fee;
         uint256 minPrice;
-        uint256 transferFee;
         uint256 feeBalance;
         uint256 listingCount;
         bool paused;
@@ -57,14 +55,12 @@ contract RarityManifestedMarket is Ownable {
     constructor(
         address tokensAddress,
         uint8 fee,
-        uint256 minPrice,
-        uint256 transferFee
+        uint256 minPrice
     ) {
         RMTokens = RarityManifestedToken(tokensAddress);
         s.paused = false;
         s.fee = fee;
         s.minPrice = minPrice;
-        s.transferFee = transferFee;
     }
 
     function list(uint256 tokenID, uint256 price) external {
@@ -237,10 +233,6 @@ contract RarityManifestedMarket is Ownable {
         return s.fee;
     }
 
-    function getTransferFee() public view returns (uint256) {
-        return s.transferFee;
-    }
-
     function getMinPrice() public view returns (uint256) {
         return s.minPrice;
     }
@@ -258,11 +250,6 @@ contract RarityManifestedMarket is Ownable {
         require(fee <= 20, "don't be greater than 20%!");
         s.fee = fee;
         emit FeeChanged(s.fee);
-    }
-
-    function setTransferFee(uint256 transferFee) external onlyOwner {
-        s.transferFee = transferFee;
-        emit TransferFeeChanged(s.transferFee);
     }
 
     function setMinPrice(uint256 minPrice) external onlyOwner {
