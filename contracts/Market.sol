@@ -6,6 +6,7 @@ import "@openzeppelin/contracts/utils/Address.sol";
 
 // RarityManifestedMarket
 interface RarityManifestedToken {
+    function ownerOf(uint256 tokenId) external view returns (address owner);
     function transferFrom(
         address from,
         address to,
@@ -73,6 +74,7 @@ contract RarityManifestedMarket is Ownable {
         uint256 price
     ) external {
         require(!s.paused, "Market is already paused");
+        require(RMTokens.ownerOf(tokenID) == msg.sender, "Summoner is not yours");
 
         uint256 payout = price - ((price * s.fee) / 100);
         if (buyer == address(0)) {
