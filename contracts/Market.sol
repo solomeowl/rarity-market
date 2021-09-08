@@ -33,7 +33,6 @@ contract RarityManifestedMarket is Ownable {
         uint256 tokenID;
         address owner; // who owns the listed summoner
         address buyer;
-        uint128 summonerType;
         uint256 price;
         uint256 payout; // price - price * fee / 100 or price - transferPrice
         Status status;
@@ -70,7 +69,6 @@ contract RarityManifestedMarket is Ownable {
     function list(
         address buyer,
         uint256 tokenID,
-        uint8 summonerType,
         uint256 price
     ) external {
         require(!s.paused, "Market is already paused");
@@ -101,7 +99,6 @@ contract RarityManifestedMarket is Ownable {
             tokenID: tokenID,
             owner: msg.sender,
             buyer: buyer,
-            summonerType: summonerType,
             price: price,
             payout: payout,
             status: Status.LISTED
