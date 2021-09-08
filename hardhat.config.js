@@ -28,7 +28,7 @@ module.exports = {
     hardhat: {
       accounts: {
         mnemonic: '註記詞',
-        initialIndex: 1,
+        initialIndex: 0,
         accountsBalance: '800000000000000000000000000000000',
       },
       chainId: 50
@@ -37,16 +37,16 @@ module.exports = {
       url: "https://rpcapi.fantom.network/",
       accounts: {
         mnemonic: '註記詞',
-        initialIndex: 1,
+        initialIndex: 0,
       },
       chainId: 250
     }
   },
-  // etherscan: {
-  //   // Your API key for Etherscan
-  //   // Obtain one at https://etherscan.io/
-  //   apiKey: process.env.ETHERSCAN_API
-  // },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "私鑰"
+  },
   solidity: {
     compilers: [
       {
