@@ -16,9 +16,9 @@ interface RarityManifestedToken {
 }
 
 contract RarityManifestedMarket is Ownable {
-    event Bought(uint256 blockNumber);
-    event Listed(uint256 blockNumber);
-    event Unlisted(uint256 blockNumber);
+    event Bought(uint256 listId);
+    event Listed(uint256 listId);
+    event Unlisted(uint256 listId);
     event FeeChanged(uint256 fee);
     event MinPriceChanged(uint256 minPrice);
 
@@ -108,7 +108,7 @@ contract RarityManifestedMarket is Ownable {
 
         Item memory item = s.listings[listId];
 
-        require(msg.value == item.price * 1e18, "wrong value");
+        require(msg.value == item.price, "wrong value");
         require(item.status == Status.LISTED, "summoner not listed");
 
         item.status = Status.SOLD;
@@ -128,7 +128,7 @@ contract RarityManifestedMarket is Ownable {
         uint256 amount = s.funds[msg.sender];
         if (amount > 0) {
             s.funds[msg.sender] = 0;
-            Address.sendValue(payable(msg.sender), amount * 1e18);
+            Address.sendValue(payable(msg.sender), amount);
         }
     }
 
@@ -145,6 +145,7 @@ contract RarityManifestedMarket is Ownable {
     function unlist(uint256 listId) external {
         Item memory item = s.listings[listId];
         require(msg.sender == item.owner);
+        require(item.status == Status.LISTED);
 
         item.status = Status.UNLISTED;
 
@@ -242,7 +243,8 @@ contract RarityManifestedMarket is Ownable {
     // Collect fees between rounds
     function collectFees() external onlyOwner {
         require(s.feeBalance > 0, "No fee left");
-        Address.sendValue(payable(owner()), s.feeBalance * 1e18);
+        s.feeBalance = 0;
+        Address.sendValue(payable(owner()), s.feeBalance);
     }
 
     // change the fee
