@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-ethers")
 require("@nomiclabs/hardhat-web3")
 require("@nomiclabs/hardhat-truffle5")
 require("@nomiclabs/hardhat-etherscan");
+require('@openzeppelin/hardhat-upgrades'); // upgrade
 require("hardhat-deploy")
 require('dotenv').config()
 
@@ -27,7 +28,7 @@ module.exports = {
   networks: {
     hardhat: {
       accounts: {
-        mnemonic: '註記詞',
+        mnemonic: 'drum noise improve dial escape trust program prison nurse multiply relief picnic',
         initialIndex: 0,
         accountsBalance: '800000000000000000000000000000000',
       },
@@ -36,7 +37,7 @@ module.exports = {
     ftmMainnet: {
       url: "https://rpcapi.fantom.network/",
       accounts: {
-        mnemonic: '註記詞',
+        mnemonic: 'drum noise improve dial escape trust program prison nurse multiply relief picnic',
         initialIndex: 0,
       },
       chainId: 250
@@ -45,7 +46,7 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: "私鑰"
+    apiKey: "9G4ZZTVY3Y8EGSK5USUWHKK9VNQR2CRB4F"
   },
   solidity: {
     compilers: [
