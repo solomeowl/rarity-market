@@ -1,5 +1,5 @@
 <div align="center">
-	<img width="600" src="README/DF-RaritySea-LOGO.jpg" alt="RaritySea">
+	<img width="600" src="README/RaritySea-LOGO.jpg" alt="RaritySea">
 	<br />
 	<br />
 </div>
@@ -9,14 +9,14 @@
 </p>
 
 <p align="center">
-  Modify from: <a href="https://github.com/snowtigersoft/darksea-market">DarkSea Market</a>
+  Modified from: <a href="https://github.com/snowtigersoft/darksea-market">DarkSea Market</a>
 </p>
 
 <p align="center">
   Contributor: <a href="https://twitter.com/ChunHaoLee_">@ChunHaoLee_</a>、<a href="https://twitter.com/solomeowl444">SOLOMΞOWL</a>、<a href="https://twitter.com/snowtigersoft">@snowtigersoft</a>(DarkSea Market Author)
 </p>
 <p align="center">
-❤ <a href="https://github.com/andrecronje/rarity">Rarity</a>❤
+❤ <a href="https://github.com/andrecronje/rarity">Rarity</a> ❤
 <p align="center">
 	 <a href="https://buidl.mirror.xyz/0I9oYGGKOxDrb2m8OjubyxjU4wYbs9Zp49c0IO2OwUc">Guild Waterdrop</a>
 	🦾<a href="https://twitter.com/marrowdao">MarrowDAO</a>
