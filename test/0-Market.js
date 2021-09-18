@@ -1,15 +1,17 @@
-const { ethers, upgrades, network } = require("hardhat");
-const { expect } = require("chai");
+const { ethers, upgrades } = require("hardhat");
 
-let basscubeToken, vesting, accounts, deployer
+let accounts, deployer
 
-describe('#InitSharing', () => {
+describe('#InitMarket', () => {
 
     it('deploy contracts and set variables', async () => {
 
         accounts = await hre.ethers.getSigners();
         deployer = accounts[0];
 
-        console.log(deployer.address);
+        const MarketFact = await ethers.getContractFactory("RarityManifestedMarket");
+        const Market = await upgrades.deployProxy(MarketFact, ["0xce761D788DF608BD21bdd59d6f4B54b2e27F25Bb", 1, 5])
+        await Market.deployed();
+        console.log("RarityManifestedMarket deployed to:", Market.address);
     })
 })

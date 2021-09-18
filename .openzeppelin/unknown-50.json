@@ -2,19 +2,19 @@
   "manifestVersion": "3.2",
   "admin": {
     "address": "0x2bBc0D88ff2c98ae993a467bC99e8E77cfa5DA50",
-    "txHash": "0x00caa25fa6fc038a6eb64c8607c48f9f9cc3e17e4339d975169125d921944113",
+    "txHash": "0x548e78394185e06d1ce605a670379d50f3b87c1f0eb3c1a05ad9ee876c3362f0",
     "deployTransaction": {
-      "hash": "0x00caa25fa6fc038a6eb64c8607c48f9f9cc3e17e4339d975169125d921944113",
+      "hash": "0x548e78394185e06d1ce605a670379d50f3b87c1f0eb3c1a05ad9ee876c3362f0",
       "type": 2,
       "accessList": [],
-      "blockHash": "0x104d843ea720b6cfaafb43d94bf13ab29154b85186f956707952374eb4cd8ac3",
+      "blockHash": "0xc33aea73782092c5a3f0465245c73a648f271fc79c6726da8548eb13687ddbad",
       "blockNumber": 2,
       "transactionIndex": 0,
       "confirmations": 1,
       "from": "0xF0F1d02243C12919c16CECCD13608D7DC0c474e4",
       "gasPrice": {
         "type": "BigNumber",
-        "hex": "0x69f42ee2"
+        "hex": "0x69f4a0b4"
       },
       "maxPriorityFeePerGas": {
         "type": "BigNumber",
@@ -22,7 +22,7 @@
       },
       "maxFeePerGas": {
         "type": "BigNumber",
-        "hex": "0x984d93c4"
+        "hex": "0x984e7768"
       },
       "gasLimit": {
         "type": "BigNumber",
@@ -35,9 +35,9 @@
       },
       "nonce": 1,
       "data": "0x608060405234801561001057600080fd5b50600080546001600160a01b031916339081178255604051909182917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a350610759806100616000396000f3fe60806040526004361061007b5760003560e01c80639623609d1161004e5780639623609d1461011157806399a88ec414610124578063f2fde38b14610144578063f3b7dead146101645761007b565b8063204e1c7a14610080578063715018a6146100bc5780637eff275e146100d35780638da5cb5b146100f3575b600080fd5b34801561008c57600080fd5b506100a061009b366004610515565b610184565b6040516001600160a01b03909116815260200160405180910390f35b3480156100c857600080fd5b506100d1610215565b005b3480156100df57600080fd5b506100d16100ee366004610554565b610292565b3480156100ff57600080fd5b506000546001600160a01b03166100a0565b6100d161011f36600461058c565b61031c565b34801561013057600080fd5b506100d161013f366004610554565b6103ad565b34801561015057600080fd5b506100d161015f366004610515565b610405565b34801561017057600080fd5b506100a061017f366004610515565b6104ef565b6000806000836001600160a01b03166040516101aa90635c60da1b60e01b815260040190565b600060405180830381855afa9150503d80600081146101e5576040519150601f19603f3d011682016040523d82523d6000602084013e6101ea565b606091505b5091509150816101f957600080fd5b8080602001905181019061020d9190610538565b949350505050565b6000546001600160a01b031633146102485760405162461bcd60e51b815260040161023f906106c0565b60405180910390fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031633146102bc5760405162461bcd60e51b815260040161023f906106c0565b6040516308f2839760e41b81526001600160a01b038281166004830152831690638f283970906024015b600060405180830381600087803b15801561030057600080fd5b505af1158015610314573d6000803e3d6000fd5b505050505050565b6000546001600160a01b031633146103465760405162461bcd60e51b815260040161023f906106c0565b60405163278f794360e11b81526001600160a01b03841690634f1ef286903490610376908690869060040161065d565b6000604051808303818588803b15801561038f57600080fd5b505af11580156103a3573d6000803e3d6000fd5b5050505050505050565b6000546001600160a01b031633146103d75760405162461bcd60e51b815260040161023f906106c0565b604051631b2ce7f360e11b81526001600160a01b038281166004830152831690633659cfe6906024016102e6565b6000546001600160a01b0316331461042f5760405162461bcd60e51b815260040161023f906106c0565b6001600160a01b0381166104945760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b606482015260840161023f565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000806000836001600160a01b03166040516101aa906303e1469160e61b815260040190565b600060208284031215610526578081fd5b81356105318161070b565b9392505050565b600060208284031215610549578081fd5b81516105318161070b565b60008060408385031215610566578081fd5b82356105718161070b565b915060208301356105818161070b565b809150509250929050565b6000806000606084860312156105a0578081fd5b83356105ab8161070b565b925060208401356105bb8161070b565b9150604084013567ffffffffffffffff808211156105d7578283fd5b818601915086601f8301126105ea578283fd5b8135818111156105fc576105fc6106f5565b604051601f8201601f19908116603f01168101908382118183101715610624576106246106f5565b8160405282815289602084870101111561063c578586fd5b82602086016020830137856020848301015280955050505050509250925092565b600060018060a01b038416825260206040818401528351806040850152825b818110156106985785810183015185820160600152820161067c565b818111156106a95783606083870101525b50601f01601f191692909201606001949350505050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052604160045260246000fd5b6001600160a01b038116811461072057600080fd5b5056fea2646970667358221220d849f96f3086b9f82cdcf665adb8c697ace05638da1c7c16ab2d26293717af6764736f6c63430008020033",
-      "r": "0x10e59c2372415cc6f8449e2b1e05174820a15c90bdbfc0e2ef87b13773230b60",
-      "s": "0x4e23a5c445c65ca49f7e1e7f5836dd609f4a38ec57e5573a651d1d1337a8513d",
-      "v": 1,
+      "r": "0x4da32b4f495e9129dcbaa059fc5a69606c702d88a30c7c5b6e34da2d662ace25",
+      "s": "0x0440966cb31d104d4d11146bca1f90e21f50ef17b489d2938a13b458dd3ad55d",
+      "v": 0,
       "creates": "0x2bBc0D88ff2c98ae993a467bC99e8E77cfa5DA50",
       "chainId": 50
     }
@@ -45,14 +45,176 @@
   "proxies": [
     {
       "address": "0x51cdb3DbAc3e8852dc6a8Fa6Ca08B730fFAdf0A1",
-      "txHash": "0x7c6a57affdf8826563f378c47b2dd6894c1a4460ca0215d335380347a246ecaa",
+      "txHash": "0xe7a9aa9d565c8fc369eaf2cfd7a11a4ccbdc82e3dd071f4de9e88b6ec5c9c4d0",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xd1b45d1085408BfE866b2e121050C2c7b0b5f4b3",
+      "txHash": "0x1209bbc26592278a248e1bcc9a6c2084f6a572a468d3de1ccb97f07fba52231f",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "e720798bbe180efb07fe2be56f654fe5974cd10a2154302f9397a3a5eb7d45a5": {
+    "4947c1bf66d5a9ae3cd241f901452331d08217594ec3f1566a034cf9f6392a21": {
       "address": "0x177ed2B43a55bCc58c6492d9c97b7143BD8E5Fb8",
-      "txHash": "0xc299340ed9907d065dfa2b6ed912973c20555e047e4e0cd488a332a5c8d60100",
+      "txHash": "0x792f4431ff9c14963ef941247250b202b976a77f30b775fb3b3f3f3aa6d1a2e7",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:26"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:21"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:77"
+          },
+          {
+            "contract": "RarityManifestedMarket",
+            "label": "RMTokens",
+            "type": "t_contract(RarityManifestedToken)1372",
+            "src": "contracts/Market.sol:52"
+          },
+          {
+            "contract": "RarityManifestedMarket",
+            "label": "s",
+            "type": "t_struct(Storage)1437_storage",
+            "src": "contracts/Market.sol:53"
+          }
+        ],
+        "types": {
+          "t_contract(RarityManifestedToken)1372": {
+            "label": "contract RarityManifestedToken"
+          },
+          "t_struct(Storage)1437_storage": {
+            "label": "struct RarityManifestedMarket.Storage",
+            "members": [
+              {
+                "label": "fee",
+                "type": "t_uint256"
+              },
+              {
+                "label": "minPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "feeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "listingCount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "paused",
+                "type": "t_bool"
+              },
+              {
+                "label": "listings",
+                "type": "t_mapping(t_uint256,t_struct(Item)1414_storage)"
+              },
+              {
+                "label": "listedIds",
+                "type": "t_array(t_uint256)dyn_storage"
+              },
+              {
+                "label": "funds",
+                "type": "t_mapping(t_address,t_uint256)"
+              }
+            ]
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_uint256,t_struct(Item)1414_storage)": {
+            "label": "mapping(uint256 => struct RarityManifestedMarket.Item)"
+          },
+          "t_struct(Item)1414_storage": {
+            "label": "struct RarityManifestedMarket.Item",
+            "members": [
+              {
+                "label": "listId",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tokenID",
+                "type": "t_uint256"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "buyer",
+                "type": "t_address"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256"
+              },
+              {
+                "label": "payout",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)1398"
+              }
+            ]
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_enum(Status)1398": {
+            "label": "enum RarityManifestedMarket.Status",
+            "members": [
+              "LISTED",
+              "UNLISTED",
+              "SOLD"
+            ]
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "e720798bbe180efb07fe2be56f654fe5974cd10a2154302f9397a3a5eb7d45a5": {
+      "address": "0x3F63839BC4899A5e86839b65Dd6Ddd017860B86c",
+      "txHash": "0xa2f9e34fd89d3b91f24385a5530fb3cdc44faa87efd5216971dcf8d738b502d5",
       "layout": {
         "storage": [
           {

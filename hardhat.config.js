@@ -28,7 +28,7 @@ module.exports = {
   networks: {
     hardhat: {
       accounts: {
-        mnemonic: 'drum noise improve dial escape trust program prison nurse multiply relief picnic',
+        mnemonic: '註記詞',
         initialIndex: 0,
         accountsBalance: '800000000000000000000000000000000',
       },
@@ -37,7 +37,7 @@ module.exports = {
     ftmMainnet: {
       url: "https://rpcapi.fantom.network/",
       accounts: {
-        mnemonic: 'drum noise improve dial escape trust program prison nurse multiply relief picnic',
+        mnemonic: '註記詞',
         initialIndex: 0,
       },
       chainId: 250
@@ -46,7 +46,7 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: "9G4ZZTVY3Y8EGSK5USUWHKK9VNQR2CRB4F"
+    apiKey: "私鑰"
   },
   solidity: {
     compilers: [

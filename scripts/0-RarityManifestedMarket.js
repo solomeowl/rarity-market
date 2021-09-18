@@ -23,9 +23,10 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const Market = await ethers.getContractFactory("RarityManifestedMarket");
-  let market = await Market.deploy('0xce761D788DF608BD21bdd59d6f4B54b2e27F25Bb', 1, 5)
-  console.log("deployed to ", market.address)
+  const MarketFact = await ethers.getContractFactory("RarityManifestedMarket");
+  const Market = await upgrades.deployProxy(MarketFact, ["0xce761D788DF608BD21bdd59d6f4B54b2e27F25Bb", 1, 5])
+  await Market.deployed();
+  console.log("RarityCraftingMarket deployed to:", Market.address);
 }
 
 main()

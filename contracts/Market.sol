@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL
 pragma solidity ^0.8.4;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
 
 // RarityManifestedMarket
 interface RarityManifestedToken {
@@ -15,7 +15,7 @@ interface RarityManifestedToken {
     ) external;
 }
 
-contract RarityManifestedMarket is Ownable {
+contract RarityManifestedMarket is OwnableUpgradeable {
     event Bought(uint256 listId);
     event Listed(uint256 listId);
     event Unlisted(uint256 listId);
@@ -52,11 +52,12 @@ contract RarityManifestedMarket is Ownable {
     RarityManifestedToken private RMTokens;
     Storage private s;
 
-    constructor(
+    function initialize (
         address tokensAddress,
         uint8 fee,
         uint256 minPrice
-    ) {
+    ) public initializer {
+        __Ownable_init();
         RMTokens = RarityManifestedToken(tokensAddress);
         s.paused = false;
         s.fee = fee;
@@ -128,7 +129,7 @@ contract RarityManifestedMarket is Ownable {
         uint256 amount = s.funds[msg.sender];
         if (amount > 0) {
             s.funds[msg.sender] = 0;
-            Address.sendValue(payable(msg.sender), amount);
+            AddressUpgradeable.sendValue(payable(msg.sender), amount);
         }
     }
 
@@ -244,7 +245,7 @@ contract RarityManifestedMarket is Ownable {
     function collectFees() external onlyOwner {
         require(s.feeBalance > 0, "No fee left");
         s.feeBalance = 0;
-        Address.sendValue(payable(owner()), s.feeBalance);
+        AddressUpgradeable.sendValue(payable(owner()), s.feeBalance);
     }
 
     // change the fee
